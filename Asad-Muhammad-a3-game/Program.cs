@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 
 public class Program
 {
-    // If you need variables in the Program class (outside functions), you must mark them as static
+    // code for window
     static string title = "Asad-Muhammad-a3-game"; // Window title
     static int screenWidth = 800; // Screen width
     static int screenHeight = 600; // Screen height
@@ -27,7 +27,7 @@ public class Program
             Raylib.BeginDrawing();
             // Clear the canvas with one color
             Raylib.ClearBackground(Color.RayWhite);
-            // Your game code here. This is a function YOU define.
+            // game code
             Update();
             // Stop drawing to the canvas, begin displaying the frame
             Raylib.EndDrawing();
@@ -38,13 +38,13 @@ public class Program
 
     static void Setup()
     {
-        // Your one-time setup code here
+        // code for player
         player = new Player();
     }
 
     static void Update()
     {
-        // Your game code run each frame here
+        // code for original game
         player.Move();
         player.Draw();
     }
