@@ -10,12 +10,14 @@ public class Program
     static int screenHeight = 600; // Screen height
     static int targetFps = 60; // Target frames-per-second
 
+    static Player player;
+
     static void Main()
     {
         // Create a window to draw to. The arguments define width and height
-        Raylib.InitWindow(800, 600, "The Collision");
+        Raylib.InitWindow(screenWidth, screenHeight, title);
         // Set the target frames-per-second (FPS)
-        Raylib.SetTargetFPS(60);
+        Raylib.SetTargetFPS(targetFps);
         // Setup your game. This is a function YOU define.
         Setup();
         // Loop so long as window should not close
@@ -47,3 +49,43 @@ public class Program
         player.Draw();
     }
 }
+
+public class player
+{
+    public Vector2 position;
+
+    public player()
+    {
+        position = new Vector2(300, 200); //position
+    }
+
+    public void Move()
+    {
+        // movement 
+        if (!Raylib.IsKeyDown(KeyboardKey.Right))
+        {
+            position.X += 2.0f;
+        }
+
+        if (Raylib.IsKeyDown(KeyboardKey.Left))
+        {
+            position.X += 2.0f;
+        }
+
+        if (Raylib.IsKeyDown(KeyboardKey.Up))
+        {
+            position.X += 2.0f;
+        }
+
+        if (Raylib.IsKeyDown(KeyboardKey.Down))
+        {
+            position.X += 2.0f;
+        }
+    }
+
+    public void Draw()
+    {
+        Raylib.DrawCircleV(position, 18, Color.Brown);
+    }
+}
+

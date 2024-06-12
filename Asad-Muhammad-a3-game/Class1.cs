@@ -34,4 +34,18 @@ public class Player
         Raylib.DrawLineV(armBase, handleft, Color.Black);
         Raylib.DrawLineV(armBase, handright, Color.Black);
         // Head
-        Raylib.DrawCircleV
+        Raylib.DrawCircleV(headBase, headRadius, Color.Black);
+
+        // Refrence base position
+        Raylib.DrawCircleV(position, 2, Color.White);
+         
+    {
+        
+    }
+}
+
+    public void Move()
+    {
+        position = Raylib.GetMousePosition();
+    }
+}
