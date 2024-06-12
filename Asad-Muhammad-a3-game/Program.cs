@@ -85,7 +85,7 @@ public class player
 
     public void Draw()
     {
-        Raylib.DrawCircleV(position, 18, Color.Brown);
+        Raylib.DrawCircleV(position, 18, Color.Green);
     }
 }
 
